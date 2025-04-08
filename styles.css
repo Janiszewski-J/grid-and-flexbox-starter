@@ -630,8 +630,10 @@ footer{
         background-clip: border-box;
         background-position: right;
         background-size: contain;
-        /* TO DO: Make this a flex container that flows in the column direction and justifies the items with space around them */
-        
+        /* Make this a flex container that flows in the column direction and justifies the items with space around them */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
     h1{
@@ -665,8 +667,8 @@ footer{
     }
 
     nav ul{
-        /* TO DO: Make this into a flex container */
-        
+        /* Make this into a flex container */
+        display: flex;
     }
 
     nav a{
@@ -714,37 +716,44 @@ footer{
     /* Plants Section */
     #plants{
         padding: 96px 32px;
-        /* TO DO: Make this a grid container with three equal rows, then give it an 8 pixel row gap and a 32 pixel column gap */
+        /* Make this a grid container with three equal columns, then give it an 8 pixel row gap and a 32 pixel column gap */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px 32px;
         
     }
 
     #plants h3, #plants > p{
-        /* TO DO: Make these elements span all of the columns in their parent containers */
-        
+        /* Make these elements span all of the columns in their parent containers */
+        grid-column: 1 / -1;
     }
 
     #plants section{
-        /* TO DO: Make these flex containers that flow in the column direction, justify with space between the elements */
-        
+        /* Make these flex containers that flow in the column direction, justify with space between the elements */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         margin: 32px auto 0;
     }
 
     #plants .price{
-        /* TO DO: Assign these a flex basis of 20% so that they are all the same height */
-        
+        /* Assign these a flex basis of 20% so that they are all the same height */
+        flex-basis: 20%;
     }
 
     /* Contact Section */
     #contact{
         padding: 64px 32px;
-        /* TO DO: Make this a grid container with two equally sized columns, a 16 pixel row gap and a 32 pixel column gap */
-        
+        /* Make this a grid container with two equally sized columns, a 16 pixel row gap and a 32 pixel column gap */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 32px;
     }
 
     /* Contact Heading and Paragraph */
     #contact h3, #contact > p{
-        /* TO DO: Use grid to make these elements span all of the columns in their container */
-        
+        /* Use grid to make these elements span all of the columns in their container */
+        grid-column: 1 / -1;
     }
 
     #contact > div{
