@@ -280,15 +280,17 @@ p{
 }
 
 #plants section{
-    /* TO DO: Make these flex containers that flow in the column direction, do not allow wrapping, and justify the content with space between the elements */
-    
+    /* Make these flex containers that flow in the column direction, do not allow wrapping, and justify the content with space between the elements */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 32px auto 0;
     max-width: 384px;
 }
 
 #plants img{
-    /* TO DO: Use flexbox here to make the images in these sections appear before the headings */
-    
+    /* Use flexbox here to make the images in these sections appear before the headings */
+    order: -1;
     width: 100%;
     max-width: 400px;
     height: auto;
@@ -389,16 +391,18 @@ th:nth-of-type(even), td:nth-of-type(even){
 
 /* Social Media List */
 #social ul{
-    /* TO DO: Make this a grid container with three equal columns and a 16 pixel gap */
-    
+    /* Make this a grid container with three equal columns and a 16 pixel gap */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
     width: fit-content;
     margin: 16px auto 32px;
 }
 
 /* Heading for Social Media Section */
 #social h4{
-    /* TO DO: Make this heading span all of the columns in its grid container */
-    
+    /* Make this heading span all of the columns in its grid container */
+    grid-column: 1 / -1;
 }
 
 #social a{
@@ -546,13 +550,14 @@ footer{
 @media screen and (min-width: 500px){
     nav ul{
         width: 100%;
-        /* TO DO: Convert the unordered list in the navigation to a flex container with space between the items */
-        
+        /* Convert the unordered list in the navigation to a flex container with space between the items */
+        display: flex;
+        justify-content: space-between;
     }
 
     nav li{
-        /* TO DO: Give each of these a flex basis of 30% */
-        
+        /* Give each of these a flex basis of 30% */
+        flex-basis: 30%;
     }
 
     nav a{
@@ -562,23 +567,26 @@ footer{
 
 @media screen and (min-width: 700px){
     #plants{
-        /* TO DO: Make this a flex container that allows wrapping, has a 1rem gap, and justifies the content to the center */
-        
+        /* Make this a flex container that allows wrapping, has a 1rem gap, and justifies the content to the center */
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
     }
 
     #plants h3, #plants p{
-        /* TO DO: Give these two elements a flex basis of 100% so they fill the container width */
-        
+        /* Give these two elements a flex basis of 100% so they fill the container width */
+        flex-basis: 100%;
     }
 
     #plants section{
-        /* TO DO: Give these sections each a flex basis of 45% */
-        
+        /* Give these sections each a flex basis of 45% */
+        flex-basis: 45%;
     }
 
     #plants .price{
-        /* TO DO: Give each of these elements a flx basis of 25% to ensure that they are all the same height */
-        
+        /* Give each of these elements a flx basis of 25% to ensure that they are all the same height */
+        flex-basis: 25%;
     }
 
     #contact > div{
